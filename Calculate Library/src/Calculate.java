@@ -33,13 +33,6 @@ public class Calculate {
 		public static double toImproperFrac (int a, int b, int c) {
 			return ((a * c) + b) / c;
 		}
-		public static double discriminant (double a, double b, double c) {
-			return b * b - 4 * a * c;
-		}
-		public static String toImproperFrac (int a, int b, int c) {
-			String data = a * c + b + "/" + c;
-			return data;
-		}
 		public static String toMixedNum (int a, int b) {
 			String answer = a / b + "_" + a % b + "/" + 2;
 			return answer;
@@ -50,8 +43,8 @@ public class Calculate {
 			int inside = b *c;
 			int last = a * d;
 			return (first + "n^2 " + outside + inside + "n" + last);
-			{
-
+		}
+			
 	public static boolean isDivisibleBy (int numerator, int denominator) {
 			if (numerator % denominator == 0) {
 				return true;
@@ -73,6 +66,7 @@ public class Calculate {
 			} else {
 				return b;
 			}
+		}
 	public static double max (double a, double b, double c) {
 			if (a > b && a > c) {
 				return a;
