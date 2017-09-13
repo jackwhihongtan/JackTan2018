@@ -95,5 +95,13 @@ public class Calculate {
 		     		return got;
 		     	}
 
-}
 	}
+	
+	public static double exponent (double a, int b) {
+		double var = 1;
+		for (int i = 0; i < b; i++) {
+			var *= a;	
+		}
+		return var;
+	}
+}
