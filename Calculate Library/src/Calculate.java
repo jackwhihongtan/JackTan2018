@@ -105,7 +105,7 @@ public class Calculate {
 		return var;
 	}
 }
-	public static int gcf(int a, int b){
+	public static int gcf (int a, int b){
 		 if (a < 0) {
 		   a = a * -1;
 		  }
@@ -118,6 +118,6 @@ public class Calculate {
 		     b = a%b;
 		     a = c;
 		  }
-		  return a+b; 
+		  return a + b; 
 		}
 }
