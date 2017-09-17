@@ -104,7 +104,16 @@ public class Calculate {
 		}
 		return var;
 	}
-}
+
+	public static int factorial (int a) {
+		fact = 1
+	    for(i=1; i <= a; i++) {
+	    	fact = fact * i
+	    }
+		return fact;
+	
+	}
+	
 	public static int gcf (int a, int b){
 		 if (a < 0) {
 		   a = a * -1;
