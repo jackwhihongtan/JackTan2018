@@ -84,16 +84,19 @@ public class Calculate {
 				}
 			}
 
-	public static double round2 (double a) {
-				double var = a % 0.01;
-				double got = a - var;
-				if (a < 0) {
-					return a * absValue;
-				} else if (var >= .005) {
-					return got + .01;
-		     	} else {
-		     		return got;
-		     	}
+	public static double round2 (double x) {
+		double x_hundred = x * 100;
+		double hundred = x_hundred % 1;
+		double round = (x_hundred - hundred);
+		
+		if (hundred >= 0.5) {
+			round += 1;
+		}
+		else if (hundred <= -0.5) {
+			round -= 1;
+		}
+		double rounded = round/100;
+		return rounded;
 
 	}
 	
@@ -106,9 +109,9 @@ public class Calculate {
 	}
 
 	public static int factorial (int a) {
-		fact = 1
+		int fact = 1;
 	    for(i=1; i <= a; i++) {
-	    	fact = fact * i
+	    	fact = fact * i;
 	    }
 		return fact;
 	
