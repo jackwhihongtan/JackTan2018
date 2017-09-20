@@ -117,19 +117,19 @@ public class Calculate {
 	
 	}
 	
-	public static int gcf (int a, int b){
+	public static int gcf (int a, int b){
 		 if (a < 0) {
 		   a = a * -1;
 		  }
-		    if (b < 0) {
-		      b = b * -1;
-		    }
-		    while(a!=0 && b!=0) 
-		  {
-		     int c = b;
-		     b = a%b;
-		     a = c;
-		  }
-		  return a + b; 
+		 if (b < 0) {
+		   b = b * -1;
 		}
-}
+		while (a != 0 && b !=0 ) {
+		int c = b;
+		b = a%b;
+		a = c;
+		}
+	return a + b;
+		}
+	}
+
