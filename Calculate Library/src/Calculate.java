@@ -132,5 +132,8 @@ public class Calculate {
 		}
 	return a + b;
 		}
+	public static String quadform (int num1, int num2, int num3) {
+		
 	}
+}
 
