@@ -59,7 +59,14 @@ public class Calculate {
 				return a * -1;
 			}
 		}
-
+	
+	public static int absValue (int a) {
+		if (a > 0) {
+			return a;
+		} else {
+			return a * -1;
+		}
+	}
 	public static double max (double a, double b) {
 			if (a > b) {
 				return a;
@@ -117,14 +124,13 @@ public class Calculate {
 		return fact;
 	
 	}
+	public static boolean isPrime (int num) {
+		return true;
+	}
 	
-	public static int gcf (int a, int b){
-		 if (a < 0) {
-		   a = a * -1;
-		  }
-		 if (b < 0) {
-		   b = b * -1;
-		}
+	public static int gcf (int a, int b) {
+		a = absValue (a);
+		b = absValue (b);
 		while (a != 0 && b !=0 ) {
 		int c = b;
 		b = a%b;
