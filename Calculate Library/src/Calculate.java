@@ -125,8 +125,16 @@ public class Calculate {
 	
 	}
 	public static boolean isPrime (int num) {
-		return true;
-	}
+		// you might wanna use sqrt and 2 is prime
+		if (sqrt )
+		if (num % 2 == 0)
+            return false;
+        for (int i = 3; i * i <= num; i += 2)
+            if (num % i == 0) return false;
+        return true;
+		
+    }
+	
 	
 	public static int gcf (int a, int b) {
 		a = absValue (a);
@@ -138,6 +146,10 @@ public class Calculate {
 		}
 	return a + b;
 		}
+
+	public static double sqrt (double num) {
+		
+	}
 	public static String quadform (int num1, int num2, int num3) {
 		
 	}
