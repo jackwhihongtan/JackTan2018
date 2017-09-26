@@ -30,6 +30,9 @@ public class Calculate {
 		public static double discriminant (double a, double b, double c) {
 			return b * b - 4 * a * c;
 		}
+		public static double discriminant (int a, int b, int c) {
+			return b * b - 4 * a * c;
+			{
 		public static double toImproperFrac (int a, int b, int c) {
 			return ((a * c) + b) / c;
 		}
@@ -90,6 +93,13 @@ public class Calculate {
 					return b;
 				}
 			}
+			public static double min (double a, double b) {
+				if (a < b) {
+					return a;
+				} else {
+					return b;
+				}
+			}
 
 	public static double round2 (double x) {
 		double x_hundred = x * 100;
@@ -125,33 +135,55 @@ public class Calculate {
 	
 	}
 	public static boolean isPrime (int num) {
-		// you might wanna use sqrt and 2 is prime
-		if (sqrt )
-		if (num % 2 == 0)
-            return false;
-        for (int i = 3; i * i <= num; i += 2)
-            if (num % i == 0) return false;
-        return true;
-		
+		// you might 
+		boolean prime = true;
+		for (int i = 2; i < num; i++) {
+			if (Calculate.isDivisibleBy(num, i) == true) {
+				
+			}
+		}
+		return prime;
     }
 	
 	
 	public static int gcf (int a, int b) {
-		a = absValue (a);
-		b = absValue (b);
+		a = Calculate.absValue (a);
+		b = Calculate.absValue (b);
 		while (a != 0 && b !=0 ) {
-		int c = b;
-		b = a%b;
-		a = c;
+			int c = b;
+			b = a%b;
+			a = c;
 		}
 	return a + b;
-		}
+	}
 
 	public static double sqrt (double num) {
-		
+		if (num < 0) {
+			throw new IllegalArgumentException ("Undefined");
+		}
+		double squareRoot = 1;
+		while (squareRoot * squareRoot > (num + .1) || squareRoot * squareRoot < (num - .1)) {
+			while (squareRoot * squareRoot < num) {
+				squareRoot = squareRoot + .01;
+			}
+			if (squareRoot * squareRoot > num) {
+				squareRoot = squareRoot - .01;
+			}
+		}
+			return (Calculate.round2(squareRoot));
 	}
+	
 	public static String quadform (int num1, int num2, int num3) {
+		if (Calculate.discriminant(num1, num2, num3) <= 0) {
+			throw new IllegalArgumentException ("No real roots");
+		}
+		double ans1 = (-1 * num1 + (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
+		double ans2 = (-1 * num1 - (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
 		
+			if (ans1 == ans2) {
+				return ("\"" + Calculate.round2(ans1) + "\"");
+			}
+			
 	}
 }
 
