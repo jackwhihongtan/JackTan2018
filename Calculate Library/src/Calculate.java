@@ -148,6 +148,9 @@ public class Calculate {
 	
 	
 	public static int gcf (int a, int b) {
+		if (a == 0 || b == 0) {
+			throw new IllegalArgumentException ("0");
+		}
 		a = Calculate.absValue (a); //made values positive to make method work
 		b = Calculate.absValue (b);
 		while (a != 0 && b !=0 ) { //test for both zero for efficiency of code
