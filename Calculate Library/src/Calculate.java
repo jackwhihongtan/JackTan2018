@@ -175,18 +175,18 @@ public class Calculate {
 	}
 	
 	public static String quadform (int num1, int num2, int num3) {
-		if (Calculate.discriminant(num1, num2, num3) <= 0) {
-			throw new IllegalArgumentException ("No real roots");
+		if (Calculate.discriminant(num1, num2, num3) < 0) {
+			throw new IllegalArgumentException ("No real roots"); //tested if discrim is negative because it is not possible
 		}
 		String answer = "";
-		double ans1 = (-1 * num1 + (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
-		double ans2 = (-1 * num1 - (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
+		double ans1 = (-1 * num1 + (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1)))); //but put discrim in sqrt for the square root  
+		double ans2 = (-1 * num1 - (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1)))); //then we need one for + and -
 		
 			if (ans1 == ans2) {
-				return ("\"" + Calculate.round2(ans1) + "\"");
+				return ("\"" + Calculate.round2(ans1) + "\""); //returns one value if both are the same
 			}
 			else {
-				 answer =  "\"" + Calculate.round2(ans1) + " and " + Calculate.round2(ans2) + "\"";
+				 answer =  "\"" + Calculate.round2(ans1) + " and " + Calculate.round2(ans2) + "\""; //returns two different answers 
 						return answer; 
 		}
 	}
