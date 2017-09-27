@@ -30,9 +30,9 @@ public class Calculate {
 		public static double discriminant (double a, double b, double c) {
 			return b * b - 4 * a * c;
 		}
-		public static double discriminant (int a, int b, int c) {
+		public static int discriminant (int a, int b, int c) {
 			return b * b - 4 * a * c;
-			{
+		}
 		public static double toImproperFrac (int a, int b, int c) {
 			return ((a * c) + b) / c;
 		}
@@ -177,13 +177,17 @@ public class Calculate {
 		if (Calculate.discriminant(num1, num2, num3) <= 0) {
 			throw new IllegalArgumentException ("No real roots");
 		}
+		String answer = "";
 		double ans1 = (-1 * num1 + (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
 		double ans2 = (-1 * num1 - (Calculate.sqrt(Calculate.discriminant(num1, num2, num3) / (2 * num1))));
 		
 			if (ans1 == ans2) {
 				return ("\"" + Calculate.round2(ans1) + "\"");
 			}
-			
+			else if (ans1 > ans2 || ans1 < ans2) {
+				 answer =  "\"" + Calculate.round2(ans1) + " and " + Calculate.round2(ans2) + "\"";
+						return answer; 
+			}
 	}
 }
 
