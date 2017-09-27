@@ -88,10 +88,10 @@ public class Calculate {
 			}
 		}
 			public static int min (int first, int second) { //opposite of max
-				if (a < b) {
-					return a;
+				if (first < second) {
+					return first;
 				} else {
-					return b;
+					return second;
 				}
 			}
 			public static double min (double num1, double num2) { //overload: double
@@ -185,7 +185,7 @@ public class Calculate {
 			if (ans1 == ans2) {
 				return ("\"" + Calculate.round2(ans1) + "\"");
 			}
-			else if (ans1 > ans2 || ans1 < ans2) {
+			else {
 				 answer =  "\"" + Calculate.round2(ans1) + " and " + Calculate.round2(ans2) + "\"";
 						return answer; 
 		}
