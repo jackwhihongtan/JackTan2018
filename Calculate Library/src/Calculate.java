@@ -1,4 +1,5 @@
 //Jack Tan, 9/27/17. 2nd Period
+// Within this class there are many Math functions
 
 public class Calculate {
 	//square the input
@@ -6,7 +7,7 @@ public class Calculate {
 			int square = operand * operand; // I tried to compute X^2
 			return square;
 		}
-		public static int cube (int alpha) {
+		public static int cube (int alpha) { //takes one int
 			int cube = alpha * alpha * alpha; // = X^3
 			return cube; 
 		}
@@ -28,10 +29,10 @@ public class Calculate {
 			double degree = ((radian * 180) / 3.14159);
 			return degree;
 		}
-		public static double discriminant (double a, double b, double c) {
+		public static double discriminant (double a, double b, double c) { // the discriminant helps tell how many real solutions are there
 			return b * b - 4 * a * c; // use in Part4 and only takes doubles
 		}
-		public static int discriminant (int a, int b, int c) {
+		public static int discriminant (int a, int b, int c) { //overload
 			return b * b - 4 * a * c;
 		}
 		public static String toImproperFrac (int a, int b, int c) {

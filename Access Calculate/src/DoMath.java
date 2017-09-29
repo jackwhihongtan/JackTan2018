@@ -1,6 +1,7 @@
 
 public class DoMath {
 	public static void main(String[] args) {
-		Calculate.sqrt(4.0);
+		System.out.println(Calculate.average(4.0, 5.0, 6.0));
+	
 	}
 }
